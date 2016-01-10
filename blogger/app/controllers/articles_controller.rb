@@ -32,5 +32,5 @@ class ArticlesController < ApplicationController
 	flash.notice = "Article '#{@article.title}' updated."
 	redirect_to article_path(@article)
   end
-  before_filter :require_login, except: [ :index, :show ]
+  before_filter :require_login, except: [:index, :show]
 end
